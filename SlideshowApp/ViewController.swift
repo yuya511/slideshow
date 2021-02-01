@@ -57,7 +57,6 @@ class ViewController: UIViewController {
     
     @objc func changeImage() {
         nowIndex += 1
-        
         if (nowIndex == imageArray.count) {
             nowIndex = 0
         }
