@@ -13,6 +13,8 @@ class ResultViewController: UIViewController {
     
     var img: UIImage!
     
+    var sendImg: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,8 +22,8 @@ class ResultViewController: UIViewController {
         
         moreImage.image = img
     }
-    
-
+   
+  
     /*
     // MARK: - Navigation
 

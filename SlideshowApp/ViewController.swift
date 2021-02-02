@@ -25,11 +25,11 @@ class ViewController: UIViewController {
     var timer: Timer!
     
     var imageArray:[UIImage] = [
-        UIImage(named:"img01")!,
-        UIImage(named:"img02")!,
-        UIImage(named:"img03")!,
-        UIImage(named:"img04")!,
-        UIImage(named:"img05")!
+        UIImage(named:"img01.JPG")!,
+        UIImage(named:"img02.JPG")!,
+        UIImage(named:"img03.JPG")!,
+        UIImage(named:"img04.JPG")!,
+        UIImage(named:"img05.JPG")!
     ]
     
     override func viewDidLoad() {
@@ -88,10 +88,17 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
+        
         resultViewController.img = imageArray[nowIndex]
+        goButton.isEnabled = true
+        backButton.isEnabled = true
+        timer.invalidate()
+        timer = nil
+        startButton.setTitle("再生", for: .normal)
     }
     
     //戻るためのやつ
     @IBAction func unwind(_segue: UIStoryboardSegue) {
+        
     }
 }
