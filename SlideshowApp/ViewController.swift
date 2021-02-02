@@ -90,11 +90,14 @@ class ViewController: UIViewController {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         
         resultViewController.img = imageArray[nowIndex]
-        goButton.isEnabled = true
-        backButton.isEnabled = true
-        timer.invalidate()
-        timer = nil
-        startButton.setTitle("再生", for: .normal)
+        
+        if timer != nil {
+            goButton.isEnabled = true
+            backButton.isEnabled = true
+            timer.invalidate()
+            timer = nil
+            startButton.setTitle("再生", for: .normal)
+        }
     }
     
     //戻るためのやつ
